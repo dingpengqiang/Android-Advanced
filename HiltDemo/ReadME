@@ -1,0 +1,19 @@
+Hilt的使用
+1.添加classpath
+2.添加plugins
+3.添加依赖
+
+使用场景：
+1、注入普通对象
+      构造方法注入@Inject
+2、通过Module注入一个普通对象
+      类@InstallIn、@Module 方法@Provides提供new对象
+3、通过Module注入一个局部单例对象
+      在Module的基础上 方法添加非@Singleton作用域的注解
+4、通过Module注入一个全局单例对象
+       在Module的基础上 方法添加@Singleton作用域的注解
+5、通过Module注入一个接口的一个实现类对象
+       实现类通过构造方法注入@Inject
+       添加Module 抽象类和方法  方法返回值为接口 参数为实现类对象
+6、通过Module注入一个接口的多个实现类对象
+       在5的基础上新建限定符注解Qualifier 并添加限定符注解来区分那个实现类
