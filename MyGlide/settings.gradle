@@ -1,0 +1,3 @@
+include ':lib-glide'
+include ':app'
+rootProject.name = "MyGlide"
